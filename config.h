@@ -166,6 +166,7 @@ static Key keys[] = {
                     "~/.config/abook/addressbook")},
     {MODKEY | ShiftMask, XK_n, spawn,
      SHCMD(TERMINAL " -e newsboat; pkill -RTMIN+6 dwmblocks")},
+    {MODKEY | ShiftMask, XK_l, spawn, SHCMD("layouthandler")},
 
     {MODKEY, XK_t, setlayout, {.v = &layouts[0]}},             /* tile */
     {MODKEY | ShiftMask, XK_t, setlayout, {.v = &layouts[1]}}, /* bstack */
