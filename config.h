@@ -159,6 +159,11 @@ static Key keys[] = {
     {MODKEY | ShiftMask, XK_r, spawn, SHCMD(TERMINAL " -e btm")},
     {MODKEY, XK_n, spawn, SHCMD(TERMINAL " -e gpuwatch")},
     {MODKEY, XK_space, spawn, SHCMD("dmenu_run")},
+    {MODKEY, XK_e, spawn,
+     SHCMD(TERMINAL " -e neomutt ; pkill -RTMIN+12 dwmblocks; rmdir ~/.abook")},
+    {MODKEY | ShiftMask, XK_e, spawn,
+     SHCMD(TERMINAL " -e abook -C ~/.config/abook/abookrc --datafile "
+                    "~/.config/abook/addressbook")},
 
     {MODKEY, XK_t, setlayout, {.v = &layouts[0]}},             /* tile */
     {MODKEY | ShiftMask, XK_t, setlayout, {.v = &layouts[1]}}, /* bstack */
