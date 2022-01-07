@@ -155,7 +155,7 @@ static Key keys[] = {
     {MODKEY, XK_q, killclient, {0}},
 
     {MODKEY, XK_w, spawn, SHCMD("$BROWSER")},
-    {MODKEY, XK_r, spawn, SHCMD(TERMINAL " -e ranger")},
+    {MODKEY, XK_r, spawn, SHCMD(TERMINAL " -e lf")},
     {MODKEY | ShiftMask, XK_r, spawn, SHCMD(TERMINAL " -e btm")},
     {MODKEY, XK_n, spawn, SHCMD(TERMINAL " -e gpuwatch")},
     {MODKEY, XK_space, spawn, SHCMD("dmenu_run")},
