@@ -20,8 +20,10 @@ static int smartgaps =
 static int showbar = 1; /* 0 means no bar */
 static int topbar = 1;  /* 0 means bottom bar */
 static const char *fonts[] = {
-    "SpaceMono Nerd Font:size=8",
-    "FontAwesome:pixelsize=8:antialias=true:autohint=true"};
+    "monospace:size=8",
+    "Material Design Icons:pixelsize=12:antialias=true:autohint=true",
+    "JoyPixels:pixelsize=10:antialias=true:autohint=true"};
+
 static char normbgcolor[] = "#000000";
 static char normbordercolor[] = "#000000";
 static char normfgcolor[] = "#eeeeee";
