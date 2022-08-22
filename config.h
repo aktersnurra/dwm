@@ -161,6 +161,7 @@ static Key keys[] = {
     {MODKEY | ShiftMask, XK_r, spawn, SHCMD(TERMINAL " -e btm")},
     {MODKEY, XK_n, spawn, SHCMD(TERMINAL " -e gpuwatch")},
     {MODKEY, XK_space, spawn, SHCMD("dmenu_run")},
+    {MODKEY | ShiftMask, XK_s, spawn, SHCMD("slock")},
     {MODKEY, XK_e, spawn,
      SHCMD(TERMINAL " -e neomutt ; pkill -RTMIN+12 dwmblocks; rmdir ~/.abook")},
     {MODKEY | ShiftMask, XK_e, spawn,
