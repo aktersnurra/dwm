@@ -159,7 +159,6 @@ static Key keys[] = {
     {MODKEY, XK_w, spawn, SHCMD("$BROWSER")},
     {MODKEY, XK_r, spawn, SHCMD(TERMINAL " -e lf")},
     {MODKEY | ShiftMask, XK_r, spawn, SHCMD(TERMINAL " -e btm")},
-    {MODKEY, XK_n, spawn, SHCMD(TERMINAL " -e gpuwatch")},
     {MODKEY, XK_space, spawn, SHCMD("dmenu_run")},
     {MODKEY | ShiftMask, XK_s, spawn, SHCMD("slock")},
     {MODKEY, XK_e, spawn,
@@ -202,6 +201,10 @@ static Key keys[] = {
     {MODKEY, XK_z, incrgaps, {.i = +3}},
     {MODKEY, XK_x, incrgaps, {.i = -3}},
     {MODKEY, XK_b, togglebar, {0}},
+    {MODKEY | ShiftMask, XK_b, spawn, SHCMD("bookmarkthis")},
+    {MODKEY, XK_n, spawn,
+     SHCMD("xdotool type $(grep -v '^#' ~/.local/share/snippets | dmenu "
+           "-i -l 50 | cut -d' ' -f1)")},
     {MODKEY | ShiftMask, XK_space, togglefloating, {0}},
 
     {MODKEY | ShiftMask, XK_m, spawn,
