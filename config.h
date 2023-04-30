@@ -154,7 +154,6 @@ static Key keys[] = {
     {MODKEY | ShiftMask, XK_q, spawn, SHCMD("sysact")},
     {MODKEY, XK_Tab, view, {0}},
     {MODKEY, XK_q, killclient, {0}},
-
     {MODKEY, XK_w, spawn, SHCMD("$BROWSER")},
     {MODKEY, XK_r, spawn, SHCMD(TERMINAL " -e lf")},
     {MODKEY | ShiftMask, XK_r, spawn, SHCMD(TERMINAL " -e btm")},
@@ -169,7 +168,6 @@ static Key keys[] = {
     {MODKEY | ShiftMask, XK_n, spawn,
      SHCMD(TERMINAL " -e newsboat; pkill -RTMIN+6 dwmblocks")},
     {MODKEY | ControlMask, XK_l, spawn, SHCMD("layouthandler")},
-
     {MODKEY, XK_t, setlayout, {.v = &layouts[0]}},             /* tile */
     {MODKEY | ShiftMask, XK_t, setlayout, {.v = &layouts[1]}}, /* bstack */
     {MODKEY, XK_y, setlayout, {.v = &layouts[2]}},             /* spiral */
@@ -206,7 +204,6 @@ static Key keys[] = {
      SHCMD("xdotool type $(grep -v '^#' ~/.local/share/snippets | dmenu "
            "-i -l 50 | cut -d' ' -f1)")},
     {MODKEY | ShiftMask, XK_space, togglefloating, {0}},
-
     {MODKEY | ShiftMask, XK_m, spawn,
      SHCMD("pamixer -t; kill -44 $(pidof dwmblocks)")},
     {MODKEY, XK_minus, spawn,
