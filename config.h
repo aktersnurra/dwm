@@ -163,6 +163,8 @@ static const Key keys[] = {
   { MODKEY,                       XK_BackSpace,            spawn,          SHCMD("sysact") },
   { MODKEY,                       XK_m,                    spawn,          SHCMD("mailsync") },
   { MODKEY|ShiftMask,             XK_m,                    spawn,          SHCMD("remaps") },
+  { MODKEY,                       XK_g,                    spawn,          {.v = (const char*[]){ "mounter", NULL } } },
+  { MODKEY|ShiftMask,             XK_g,                    spawn,          {.v = (const char*[]){ "umounter", NULL } } },
   { MODKEY,                       XK_p,                    spawn,          SHCMD("scrot -s -q 100 screenshot.png") },
   { MODKEY|ShiftMask,             XK_s,                    spawn,          SHCMD("slock") },
   { MODKEY,                       XK_w,                    spawn,          SHCMD("$BROWSER") },
