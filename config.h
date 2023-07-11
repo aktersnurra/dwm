@@ -16,7 +16,7 @@ static const unsigned int gappov    = 30; /* vert outer gap between windows and 
 static       int smartgaps          = 0;  /* 1 means no outer gap when there is only one window */
 static int showbar            = 1;        /* 0 means no bar */
 static int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "monospace:size=8", "Symbols Nerd Font:style=2048-em:pixelsize=12:antialias=true:autohint=true" };
+static const char *fonts[]          = { "monospace:size=8", "Symbols Nerd Font:style=Regular:pixelsize=12:antialias=true:autohint=true" };
 static const char dmenufont[]       = "monospace:size=8";
 static char normbgcolor[] =     "#000000";
 static char normbordercolor[] = "#000000";
@@ -177,7 +177,8 @@ static const Key keys[] = {
   { MODKEY|ControlMask,           XK_l,                    spawn,          SHCMD("layouthandler") },
   /* Bookmarks */
   { MODKEY,                       XK_b,                    spawn,          SHCMD("bookmarkthis")},
-  { MODKEY|XK_space,              XK_space,                spawn,          SHCMD("xdotool type $(grep -v '^#' ~/.local/share/snippets | dmenu -i -l 50 | cut -d' ' -f1)")},
+  { MODKEY|ControlMask,           XK_b,                    spawn,          SHCMD(TERMINAL " -e nvim ~/.local/share/snippets") },
+  { MODKEY|ShiftMask,             XK_space,                spawn,          SHCMD("xdotool type $(grep -v '^#' ~/.local/share/snippets | dmenu -i -l 50 | cut -d' ' -f1)")},
   /* Audio */
   { MODKEY|ShiftMask,             XK_t,                    spawn,          SHCMD("pamixer -t; kill -44 $(pidof dwmblocks)")},
   { MODKEY,                       XK_minus,                spawn,          SHCMD("pamixer --allow-boost -d 5; kill -44 $(pidof dwmblocks)") },
