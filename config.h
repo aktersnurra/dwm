@@ -135,7 +135,7 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_space,                spawn,          {.v = dmenucmd } },
   { MODKEY|ShiftMask,		          XK_space,	               spawn,		       {.v = passmenucmd } },
 	{ MODKEY,                       XK_t,                    spawn,          {.v = termcmd } },
-	{ MODKEY|ShiftMask,             XK_b,                    togglebar,      {0} },
+	{ MODKEY,                       XK_d,                    togglebar,      {0} },
   STACKKEYS(MODKEY,                                        focus)
   STACKKEYS(MODKEY|ShiftMask,                              push)
 	{ MODKEY,                       XK_o,                    incnmaster,     {.i = +1 } },
@@ -178,7 +178,7 @@ static const Key keys[] = {
   /* Bookmarks */
   { MODKEY,                       XK_b,                    spawn,          SHCMD("bookmarkthis")},
   { MODKEY|ControlMask,           XK_b,                    spawn,          SHCMD(TERMINAL " -e nvim ~/.local/share/snippets") },
-  { MODKEY|ShiftMask,             XK_space,                spawn,          SHCMD("xdotool type $(grep -v '^#' ~/.local/share/snippets | dmenu -i -l 50 | cut -d' ' -f1)")},
+  { MODKEY|ShiftMask,             XK_b,                    spawn,          SHCMD("xdotool type $(grep -v '^#' ~/.local/share/snippets | dmenu -i -l 50 | cut -d' ' -f1)")},
   /* Audio */
   { MODKEY|ShiftMask,             XK_t,                    spawn,          SHCMD("pamixer -t; kill -44 $(pidof dwmblocks)")},
   { MODKEY,                       XK_minus,                spawn,          SHCMD("pamixer --allow-boost -d 5; kill -44 $(pidof dwmblocks)") },
